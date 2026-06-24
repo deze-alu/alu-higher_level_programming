@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Compiling $PYFILE ..." && python3 -c "import py_compile; py_compile.compile('$PYFILE', cfile='${PYFILE}c')"
+echo "Compiling $PYFILE ..." && PYFILE="$PYFILE" python3 -c 'import os, py_compile; f = os.environ["PYFILE"]; py_compile.compile(f, cfile=f + "c")'
