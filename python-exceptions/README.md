@@ -11,3 +11,6 @@
 | `4-list_division.py` | Divides 2 lists element by element with error reporting |
 | `5-raise_exception.py` | Raises a TypeError |
 | `6-raise_exception_msg.py` | Raises a NameError with a message |
+| `100-safe_print_integer_err.py` | Prints an integer, reporting errors on stderr |
+| `101-safe_function.py` | Executes any function safely, errors to stderr |
+| `102-magic_calculation.py` | Python function matching the given bytecode |
