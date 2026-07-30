@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Unittests for the Square class."""
 import io
+import json
+import os
 import unittest
 from contextlib import redirect_stdout
 from models.base import Base
@@ -133,6 +135,16 @@ class TestSquareSize(unittest.TestCase):
         """The offsets keep their own messages."""
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, "2")
+
+    def test_vertical_offset_string(self):
+        """A vertical offset that is not an integer is refused."""
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            Square(1, 2, "3")
+
+    def test_negative_horizontal_offset(self):
+        """A negative horizontal offset is refused."""
+        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
+            Square(1, -2)
 
     def test_negative_offset(self):
         """A negative offset is refused."""
@@ -337,6 +349,65 @@ class TestSquareToDictionary(unittest.TestCase):
         copy = Square(1, 1)
         copy.update(**original.to_dictionary())
         self.assertIsNot(copy, original)
+
+
+class TestSquareSaveToFile(unittest.TestCase):
+    """Checks the inherited save_to_file class method."""
+
+    def tearDown(self):
+        """Removes the file written by the tests."""
+        try:
+            os.remove("Square.json")
+        except FileNotFoundError:
+            pass
+
+    def test_none(self):
+        """A None list writes an empty JSON list."""
+        Square.save_to_file(None)
+        with open("Square.json") as a_file:
+            self.assertEqual(a_file.read(), "[]")
+
+    def test_empty_list(self):
+        """An empty list writes an empty JSON list."""
+        Square.save_to_file([])
+        with open("Square.json") as a_file:
+            self.assertEqual(a_file.read(), "[]")
+
+    def test_file_name(self):
+        """The file carries the name of the class."""
+        Square.save_to_file([Square(1)])
+        self.assertTrue(os.path.exists("Square.json"))
+
+    def test_content(self):
+        """The file holds the description of the square."""
+        shape = Square(10, 2, 1, 1)
+        Square.save_to_file([shape])
+        with open("Square.json") as a_file:
+            self.assertEqual(json.loads(a_file.read()),
+                             [shape.to_dictionary()])
+
+    def test_two_squares(self):
+        """Every square of the list is written."""
+        Square.save_to_file([Square(1), Square(2)])
+        with open("Square.json") as a_file:
+            self.assertEqual(len(json.loads(a_file.read())), 2)
+
+    def test_overwrites(self):
+        """A second call replaces the content of the file."""
+        Square.save_to_file([Square(1), Square(2)])
+        Square.save_to_file([Square(3)])
+        with open("Square.json") as a_file:
+            self.assertEqual(len(json.loads(a_file.read())), 1)
+
+    def test_returns_nothing(self):
+        """The method returns nothing."""
+        self.assertIsNone(Square.save_to_file([]))
+
+    def test_round_trip(self):
+        """A square saved and read back holds the same values."""
+        shape = Square(7, 9, 1, 5)
+        Square.save_to_file([shape])
+        self.assertEqual(str(Square.load_from_file()[0]), str(shape))
 
 
 if __name__ == "__main__":
