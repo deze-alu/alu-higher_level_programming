@@ -75,6 +75,72 @@ A value that is not an integer raises a type error naming the value:
     Traceback (most recent call last):
     TypeError: size must be an integer
 
+A set is refused as well:
+
+    >>> bg.integer_validator("age", {3, 4})
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+    >>> bg.integer_validator("age", set())
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+    >>> bg.integer_validator("age", frozenset([3, 4]))
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+Other number types are refused, since only an integer is accepted:
+
+    >>> bg.integer_validator("age", 1j)
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+    >>> bg.integer_validator("age", float('nan'))
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+    >>> bg.integer_validator("age", float('inf'))
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+Byte sequences and ranges are refused:
+
+    >>> bg.integer_validator("age", b'3')
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+    >>> bg.integer_validator("age", bytearray(b'3'))
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+    >>> bg.integer_validator("age", range(3))
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+An empty container is refused for the same reason:
+
+    >>> bg.integer_validator("age", [])
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+    >>> bg.integer_validator("age", ())
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+    >>> bg.integer_validator("age", {})
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+A class and an instance are refused too:
+
+    >>> bg.integer_validator("age", int)
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+    >>> bg.integer_validator("age", BaseGeometry())
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
 A boolean is not accepted, even though it behaves like an integer:
 
     >>> bg.integer_validator("height", True)
