@@ -14,3 +14,4 @@ and class methods.
 | `3-rectangle.py` | A Rectangle printed with the character # |
 | `4-rectangle.py` | A Rectangle that can be recreated from its repr with eval |
 | `5-rectangle.py` | A Rectangle that prints a message when it is deleted |
+| `6-rectangle.py` | A Rectangle that counts its instances with a class attribute |
