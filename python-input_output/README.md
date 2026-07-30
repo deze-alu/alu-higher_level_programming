@@ -17,3 +17,4 @@ data structures to JSON and back.
 | `7-add_item.py` | Adds command line arguments to a list saved as JSON |
 | `8-class_to_json.py` | Describes an object with a simple dictionary |
 | `9-student.py` | A student class describing itself with a dictionary |
+| `10-student.py` | A student class filtering its dictionary description |
