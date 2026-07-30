@@ -32,3 +32,4 @@ the difference between mutable and immutable types.
 | `22-answer.txt` | Whether (1) is a tuple |
 | `23-answer.txt` | Whether (1, ) is a tuple |
 | `24-answer.txt` | Whether two (1) values are the same object |
+| `25-answer.txt` | Whether two (1, 2) tuples are the same object |
