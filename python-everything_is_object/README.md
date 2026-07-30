@@ -11,3 +11,4 @@ the difference between mutable and immutable types.
 | `1-answer.txt` | The function that returns the variable identifier |
 | `2-answer.txt` | Whether two different integer values share an object |
 | `3-answer.txt` | Whether two equal small integers share an object |
+| `4-answer.txt` | Whether an assigned alias shares its object |
