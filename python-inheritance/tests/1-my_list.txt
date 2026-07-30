@@ -1,0 +1,85 @@
+``1-my_list`` module
+====================
+
+Using ``MyList``
+----------------
+
+Load the class under test:
+
+    >>> MyList = __import__('1-my_list').MyList
+
+A new ``MyList`` starts empty and prints like a regular list:
+
+    >>> my_list = MyList()
+    >>> print(my_list)
+    []
+
+It accepts every inherited list method, such as ``append``:
+
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+``print_sorted`` prints the elements in ascending order:
+
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+
+The original list is left unchanged:
+
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+Sorting an empty list prints an empty list:
+
+    >>> MyList().print_sorted()
+    []
+
+A list holding a single element prints that element:
+
+    >>> MyList([7]).print_sorted()
+    [7]
+
+Negative numbers are ordered before positive ones:
+
+    >>> MyList([3, -1, 0, -5]).print_sorted()
+    [-5, -1, 0, 3]
+
+Repeated values are all kept:
+
+    >>> MyList([2, 2, 1, 2]).print_sorted()
+    [1, 2, 2, 2]
+
+An already sorted list stays in the same order:
+
+    >>> MyList([1, 2, 3]).print_sorted()
+    [1, 2, 3]
+
+``print_sorted`` returns nothing:
+
+    >>> print(MyList([2, 1]).print_sorted())
+    [1, 2]
+    None
+
+``MyList`` is a genuine list subclass:
+
+    >>> issubclass(MyList, list)
+    True
+
+    >>> isinstance(MyList(), list)
+    True
+
+The class can be built directly with an iterable:
+
+    >>> print(MyList([4, 1, 3]))
+    [4, 1, 3]
+
+``print_sorted`` expects no argument other than the instance:
+
+    >>> MyList([1, 2]).print_sorted(3)  # doctest: +IGNORE_EXCEPTION_DETAIL
+    Traceback (most recent call last):
+    TypeError
