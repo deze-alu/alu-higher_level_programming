@@ -16,3 +16,5 @@ subqueries and joins.
 | `5-unique_id.sql` | Creates unique_id where the id must be unique |
 | `6-states.sql` | Creates hbtn_0d_usa and the table states |
 | `7-cities.sql` | Creates hbtn_0d_usa and the table cities |
+| `8-cities_of_california_subquery.sql` | Lists the cities of California with a subquery |
+| `9-cities_by_state_join.sql` | Lists the cities with the name of their state |
