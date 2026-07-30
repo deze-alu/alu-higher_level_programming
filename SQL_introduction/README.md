@@ -22,3 +22,4 @@ tables, and querying them with `SELECT`, `INSERT`, `UPDATE` and `DELETE`.
 | `12-no_cheating.sql` | Updates the score of Bob to 10 |
 | `13-change_class.sql` | Removes the records with a score of 5 or less |
 | `14-average.sql` | Computes the score average of all the records |
+| `15-groups.sql` | Lists the number of records with the same score |
