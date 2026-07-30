@@ -8,3 +8,4 @@ private attributes, `self`, the `__init__` method, and properties.
 | File | Description |
 |------|-------------|
 | `0-square.py` | An empty class Square that defines a square |
+| `1-square.py` | A Square defined by a private instance attribute size |
