@@ -18,3 +18,10 @@ subqueries and joins.
 | `7-cities.sql` | Creates hbtn_0d_usa and the table cities |
 | `8-cities_of_california_subquery.sql` | Lists the cities of California with a subquery |
 | `9-cities_by_state_join.sql` | Lists the cities with the name of their state |
+| `10-genre_id_by_show.sql` | Lists the shows having at least one genre linked |
+| `11-genre_id_all_shows.sql` | Lists all the shows with their genre ids |
+| `12-no_genre.sql` | Lists the shows without a genre linked |
+| `13-count_shows_by_genre.sql` | Counts the shows linked to each genre |
+| `14-my_genres.sql` | Lists all the genres of the show Dexter |
+| `15-comedy_only.sql` | Lists all the Comedy shows |
+| `16-shows_by_genre.sql` | Lists all the shows with their genre names |
