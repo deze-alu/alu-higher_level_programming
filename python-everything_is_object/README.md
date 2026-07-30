@@ -35,3 +35,4 @@ the difference between mutable and immutable types.
 | `25-answer.txt` | Whether two (1, 2) tuples are the same object |
 | `26-answer.txt` | Whether two empty tuples are the same object |
 | `27-answer.txt` | Whether concatenation keeps the list identifier |
+| `28-answer.txt` | Whether augmented assignment keeps the list identifier |
