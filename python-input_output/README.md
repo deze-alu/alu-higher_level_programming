@@ -12,3 +12,4 @@ data structures to JSON and back.
 | `2-append_write.py` | Appends a string at the end of a text file |
 | `3-to_json_string.py` | Returns the JSON string representation of an object |
 | `4-from_json_string.py` | Builds a Python data structure out of a JSON string |
+| `5-save_to_json_file.py` | Saves an object to a text file as JSON |
