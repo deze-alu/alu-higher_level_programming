@@ -18,3 +18,4 @@ built-in functions that inspect type relationships.
 | `8-rectangle.py` | A rectangle validating its private sides |
 | `9-rectangle.py` | A rectangle implementing its area and description |
 | `10-square.py` | A square built on the rectangle class |
+| `11-square.py` | A square with its own area and description |
