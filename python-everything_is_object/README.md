@@ -15,3 +15,4 @@ the difference between mutable and immutable types.
 | `5-answer.txt` | Whether an incremented integer shares its object |
 | `6-answer.txt` | Comparing an aliased string with == |
 | `7-answer.txt` | Comparing an aliased string with is |
+| `8-answer.txt` | Comparing two identical string literals with == |
