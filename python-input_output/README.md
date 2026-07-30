@@ -14,3 +14,4 @@ data structures to JSON and back.
 | `4-from_json_string.py` | Builds a Python data structure out of a JSON string |
 | `5-save_to_json_file.py` | Saves an object to a text file as JSON |
 | `6-load_from_json_file.py` | Builds an object out of a JSON text file |
+| `7-add_item.py` | Adds command line arguments to a list saved as JSON |
