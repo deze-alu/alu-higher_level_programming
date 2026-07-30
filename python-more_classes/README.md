@@ -1,0 +1,11 @@
+# Python - More Classes and Objects
+
+A deeper look at Object-Oriented Programming in Python: string representation
+with `__str__` and `__repr__`, destructors, class attributes, static methods
+and class methods.
+
+## Tasks
+
+| File | Description |
+|------|-------------|
+| `0-rectangle.py` | An empty class Rectangle that defines a rectangle |
