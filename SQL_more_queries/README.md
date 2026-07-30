@@ -14,3 +14,5 @@ subqueries and joins.
 | `3-force_name.sql` | Creates force_name where the name can never be null |
 | `4-never_empty.sql` | Creates id_not_null where the id defaults to 1 |
 | `5-unique_id.sql` | Creates unique_id where the id must be unique |
+| `6-states.sql` | Creates hbtn_0d_usa and the table states |
+| `7-cities.sql` | Creates hbtn_0d_usa and the table cities |
