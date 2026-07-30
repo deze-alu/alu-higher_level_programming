@@ -9,3 +9,4 @@ and class methods.
 | File | Description |
 |------|-------------|
 | `0-rectangle.py` | An empty class Rectangle that defines a rectangle |
+| `1-rectangle.py` | A Rectangle defined by width and height properties |
