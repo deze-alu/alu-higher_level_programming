@@ -17,3 +17,4 @@ and class methods.
 | `6-rectangle.py` | A Rectangle that counts its instances with a class attribute |
 | `7-rectangle.py` | A Rectangle drawn with a customizable print symbol |
 | `8-rectangle.py` | A Rectangle comparing two rectangles with a static method |
+| `9-rectangle.py` | A Rectangle with a class method that builds a square |
