@@ -23,3 +23,4 @@ tables, and querying them with `SELECT`, `INSERT`, `UPDATE` and `DELETE`.
 | `13-change_class.sql` | Removes the records with a score of 5 or less |
 | `14-average.sql` | Computes the score average of all the records |
 | `15-groups.sql` | Lists the number of records with the same score |
+| `16-no_link.sql` | Lists the records that have a name value |
