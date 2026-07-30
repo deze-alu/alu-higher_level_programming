@@ -24,3 +24,4 @@ the difference between mutable and immutable types.
 | `14-answer.txt` | What an alias shows after append mutates the list |
 | `15-answer.txt` | What an alias shows after the name is rebound with + |
 | `16-answer.txt` | Whether a function can increment a caller's integer |
+| `17-answer.txt` | Whether a function can append to a caller's list |
