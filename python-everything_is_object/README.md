@@ -22,3 +22,4 @@ the difference between mutable and immutable types.
 | `12-answer.txt` | Comparing an aliased list with == |
 | `13-answer.txt` | Comparing an aliased list with is |
 | `14-answer.txt` | What an alias shows after append mutates the list |
+| `15-answer.txt` | What an alias shows after the name is rebound with + |
