@@ -11,3 +11,6 @@ subqueries and joins.
 | `0-privileges.sql` | Lists the privileges of user_0d_1 and user_0d_2 |
 | `1-create_user.sql` | Creates the user user_0d_1 with all privileges |
 | `2-create_read_user.sql` | Creates hbtn_0d_2 and the read only user user_0d_2 |
+| `3-force_name.sql` | Creates force_name where the name can never be null |
+| `4-never_empty.sql` | Creates id_not_null where the id defaults to 1 |
+| `5-unique_id.sql` | Creates unique_id where the id must be unique |
