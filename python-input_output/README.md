@@ -16,3 +16,4 @@ data structures to JSON and back.
 | `6-load_from_json_file.py` | Builds an object out of a JSON text file |
 | `7-add_item.py` | Adds command line arguments to a list saved as JSON |
 | `8-class_to_json.py` | Describes an object with a simple dictionary |
+| `9-student.py` | A student class describing itself with a dictionary |
