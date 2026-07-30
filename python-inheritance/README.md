@@ -12,3 +12,4 @@ built-in functions that inspect type relationships.
 | `2-is_same_class.py` | Checks whether an object is exactly of a given class |
 | `3-is_kind_of_class.py` | Checks whether an object belongs to a class family |
 | `4-inherits_from.py` | Checks whether an object belongs to a strict subclass |
+| `5-base_geometry.py` | An empty base class for geometry shapes |
