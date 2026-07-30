@@ -9,3 +9,4 @@ built-in functions that inspect type relationships.
 |------|-------------|
 | `0-lookup.py` | Lists the available attributes and methods of an object |
 | `1-my_list.py` | A list subclass that can print itself sorted |
+| `2-is_same_class.py` | Checks whether an object is exactly of a given class |
