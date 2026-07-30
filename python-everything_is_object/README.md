@@ -20,3 +20,4 @@ the difference between mutable and immutable types.
 | `10-answer.txt` | Comparing two identical list literals with == |
 | `11-answer.txt` | Comparing two identical list literals with is |
 | `12-answer.txt` | Comparing an aliased list with == |
+| `13-answer.txt` | Comparing an aliased list with is |
