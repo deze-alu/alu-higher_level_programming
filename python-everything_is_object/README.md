@@ -16,3 +16,4 @@ the difference between mutable and immutable types.
 | `6-answer.txt` | Comparing an aliased string with == |
 | `7-answer.txt` | Comparing an aliased string with is |
 | `8-answer.txt` | Comparing two identical string literals with == |
+| `9-answer.txt` | Comparing two identical string literals with is |
