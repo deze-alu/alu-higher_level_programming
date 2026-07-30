@@ -18,3 +18,4 @@ tables, and querying them with `SELECT`, `INSERT`, `UPDATE` and `DELETE`.
 | `8-count_89.sql` | Counts the records with id = 89 in first_table |
 | `9-full_creation.sql` | Creates the table second_table and adds rows |
 | `10-top_score.sql` | Lists all records of second_table ordered by score |
+| `11-best_score.sql` | Lists the records of second_table with a score of 10 or more |
