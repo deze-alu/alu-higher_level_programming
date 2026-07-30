@@ -13,3 +13,4 @@ tables, and querying them with `SELECT`, `INSERT`, `UPDATE` and `DELETE`.
 | `3-list_tables.sql` | Lists all the tables of a database |
 | `4-first_table.sql` | Creates the table first_table if it does not exist |
 | `5-full_table.sql` | Prints the full description of the table first_table |
+| `6-list_values.sql` | Lists all the rows of the table first_table |
