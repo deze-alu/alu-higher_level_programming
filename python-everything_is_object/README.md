@@ -27,3 +27,4 @@ the difference between mutable and immutable types.
 | `17-answer.txt` | Whether a function can append to a caller's list |
 | `18-answer.txt` | Whether a function can reassign a caller's list |
 | `19-copy_list.py` | Returns a copy of a list |
+| `20-answer.txt` | Whether () is a tuple |
