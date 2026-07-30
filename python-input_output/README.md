@@ -8,3 +8,4 @@ data structures to JSON and back.
 | File | Description |
 |------|-------------|
 | `0-read_file.py` | Prints the whole content of a UTF8 text file |
+| `1-write_file.py` | Writes a string to a text file and counts characters |
