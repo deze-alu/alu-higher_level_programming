@@ -11,3 +11,4 @@ and class methods.
 | `0-rectangle.py` | An empty class Rectangle that defines a rectangle |
 | `1-rectangle.py` | A Rectangle defined by width and height properties |
 | `2-rectangle.py` | A Rectangle that returns its area and perimeter |
+| `3-rectangle.py` | A Rectangle printed with the character # |
