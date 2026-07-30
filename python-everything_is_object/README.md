@@ -1,0 +1,10 @@
+# Python - Everything is Object
+
+An exploration of how Python handles objects, references and aliasing, and of
+the difference between mutable and immutable types.
+
+## Tasks
+
+| File | Description |
+|------|-------------|
+| `0-answer.txt` | The function that prints the type of an object |
