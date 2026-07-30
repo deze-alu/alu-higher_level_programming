@@ -30,3 +30,4 @@ the difference between mutable and immutable types.
 | `20-answer.txt` | Whether () is a tuple |
 | `21-answer.txt` | Whether (1, 2) is a tuple |
 | `22-answer.txt` | Whether (1) is a tuple |
+| `23-answer.txt` | Whether (1, ) is a tuple |
