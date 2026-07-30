@@ -12,3 +12,4 @@ tables, and querying them with `SELECT`, `INSERT`, `UPDATE` and `DELETE`.
 | `2-remove_database.sql` | Deletes the database hbtn_0c_0 if it exists |
 | `3-list_tables.sql` | Lists all the tables of a database |
 | `4-first_table.sql` | Creates the table first_table if it does not exist |
+| `5-full_table.sql` | Prints the full description of the table first_table |
