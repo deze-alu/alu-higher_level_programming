@@ -12,3 +12,4 @@ and class methods.
 | `1-rectangle.py` | A Rectangle defined by width and height properties |
 | `2-rectangle.py` | A Rectangle that returns its area and perimeter |
 | `3-rectangle.py` | A Rectangle printed with the character # |
+| `4-rectangle.py` | A Rectangle that can be recreated from its repr with eval |
