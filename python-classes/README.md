@@ -17,3 +17,4 @@ private attributes, `self`, the `__init__` method, and properties.
 | `100-singly_linked_list.py` | A singly linked list with sorted insertion |
 | `101-square.py` | A Square that prints itself when passed to print |
 | `102-square.py` | A Square whose instances compare by area |
+| `103-magic_class.py` | A Python class matching the given bytecode |
