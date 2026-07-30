@@ -19,3 +19,4 @@ data structures to JSON and back.
 | `9-student.py` | A student class describing itself with a dictionary |
 | `10-student.py` | A student class filtering its dictionary description |
 | `11-student.py` | A student class saved to disk and rebuilt |
+| `12-pascal_triangle.py` | Builds the Pascal's triangle of a given size |

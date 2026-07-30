@@ -1,0 +1,96 @@
+``12-pascal_triangle`` module
+=============================
+
+Using ``pascal_triangle``
+-------------------------
+
+Load the function under test:
+
+    >>> pascal_triangle = __import__('12-pascal_triangle').pascal_triangle
+
+The triangle of 5 rows holds the expected coefficients:
+
+    >>> pascal_triangle(5)
+    [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
+
+The result is a list of lists of integers:
+
+    >>> triangle = pascal_triangle(3)
+    >>> type(triangle)
+    <class 'list'>
+    >>> type(triangle[0])
+    <class 'list'>
+    >>> type(triangle[0][0])
+    <class 'int'>
+
+A single row is the top of the triangle:
+
+    >>> pascal_triangle(1)
+    [[1]]
+
+Two rows add the first pair of ones:
+
+    >>> pascal_triangle(2)
+    [[1], [1, 1]]
+
+A larger triangle keeps building each row atop the previous one:
+
+    >>> pascal_triangle(6)
+    [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1], [1, 5, 10, 10, 5, 1]]
+
+A size of 0 gives an empty list:
+
+    >>> pascal_triangle(0)
+    []
+
+A negative size also gives an empty list:
+
+    >>> pascal_triangle(-1)
+    []
+
+    >>> pascal_triangle(-99)
+    []
+
+Row ``n`` always holds ``n + 1`` values:
+
+    >>> [len(row) for row in pascal_triangle(7)]
+    [1, 2, 3, 4, 5, 6, 7]
+
+Every row starts and ends with 1:
+
+    >>> all(row[0] == 1 and row[-1] == 1 for row in pascal_triangle(10))
+    True
+
+Every row reads the same backwards:
+
+    >>> all(row == row[::-1] for row in pascal_triangle(10))
+    True
+
+The values of row ``n`` add up to ``2 ** n``:
+
+    >>> [sum(row) for row in pascal_triangle(6)]
+    [1, 2, 4, 8, 16, 32]
+
+Each value is the sum of the two values above it:
+
+    >>> triangle = pascal_triangle(8)
+    >>> all(triangle[i][j] == triangle[i - 1][j - 1] + triangle[i - 1][j]
+    ...     for i in range(1, 8) for j in range(1, i))
+    True
+
+Large triangles stay exact, since the values are integers:
+
+    >>> pascal_triangle(21)[-1][10]
+    184756
+
+Every row is a separate list:
+
+    >>> triangle = pascal_triangle(4)
+    >>> len({id(row) for row in triangle}) == len(triangle)
+    True
+
+The size is required:
+
+    >>> pascal_triangle()  # doctest: +IGNORE_EXCEPTION_DETAIL
+    Traceback (most recent call last):
+    TypeError
