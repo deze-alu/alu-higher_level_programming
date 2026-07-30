@@ -11,3 +11,4 @@ private attributes, `self`, the `__init__` method, and properties.
 | `1-square.py` | A Square defined by a private instance attribute size |
 | `2-square.py` | A Square that validates the type and value of size |
 | `3-square.py` | A Square with a public instance method that returns its area |
+| `4-square.py` | A Square whose size is accessed and updated through a property |
