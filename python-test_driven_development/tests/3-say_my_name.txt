@@ -1,0 +1,77 @@
+``3-say_my_name`` module
+========================
+
+Using ``say_my_name``
+---------------------
+
+Load the function under test:
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Both names are printed after the greeting:
+
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+
+    >>> say_my_name("Walter", "White")
+    My name is Walter White
+
+The last name defaults to an empty string, leaving a trailing space:
+
+    >>> say_my_name("Bob")  # doctest: +NORMALIZE_WHITESPACE
+    My name is Bob
+
+An empty first name is accepted, since only the type is checked:
+
+    >>> say_my_name("", "Smith")  # doctest: +NORMALIZE_WHITESPACE
+    My name is Smith
+
+    >>> say_my_name("", "")  # doctest: +NORMALIZE_WHITESPACE
+    My name is
+
+Names holding digits or spaces are still strings:
+
+    >>> say_my_name("John 2", "Smith")
+    My name is John 2 Smith
+
+A first name that is not a string is refused:
+
+    >>> say_my_name(12, "White")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    >>> say_my_name(None)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    >>> say_my_name(["John"], "White")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+A last name that is not a string is refused as well:
+
+    >>> say_my_name("John", 12)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+    >>> say_my_name("John", None)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+The first name is checked before the last name:
+
+    >>> say_my_name(12, 13)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+A first name is required:
+
+    >>> say_my_name()  # doctest: +IGNORE_EXCEPTION_DETAIL
+    Traceback (most recent call last):
+    TypeError
+
+The function returns nothing:
+
+    >>> print(say_my_name("Bob", "Dylan"))
+    My name is Bob Dylan
+    None

@@ -1,0 +1,94 @@
+``5-text_indentation`` module
+=============================
+
+Using ``text_indentation``
+--------------------------
+
+Load the function under test:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+A period ends a line and is followed by an empty line:
+
+    >>> text_indentation("Hello.")
+    Hello.
+    <BLANKLINE>
+
+A question mark behaves the same way:
+
+    >>> text_indentation("Hello?")
+    Hello?
+    <BLANKLINE>
+
+So does a colon:
+
+    >>> text_indentation("Hello:")
+    Hello:
+    <BLANKLINE>
+
+Every delimiter of a longer text splits it:
+
+    >>> text_indentation("A. B? C:")
+    A.
+    <BLANKLINE>
+    B?
+    <BLANKLINE>
+    C:
+    <BLANKLINE>
+
+The spaces starting and ending each line are removed, inner ones are kept:
+
+    >>> text_indentation("   Hello   .   World.")
+    Hello   .
+    <BLANKLINE>
+    World.
+    <BLANKLINE>
+
+A text holding no delimiter is printed as a single line:
+
+    >>> text_indentation("Hello World")
+    Hello World
+
+Other punctuation is not a delimiter:
+
+    >>> text_indentation("Hello, World!")
+    Hello, World!
+
+An empty text prints nothing:
+
+    >>> text_indentation("")
+
+A text made of spaces only prints nothing:
+
+    >>> text_indentation("    ")
+
+Text left after the last delimiter is printed without an empty line:
+
+    >>> text_indentation("Hi. There")
+    Hi.
+    <BLANKLINE>
+    There
+
+A text that is not a string is refused:
+
+    >>> text_indentation(12)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(["Hello"])
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(12.5)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+A text is required:
+
+    >>> text_indentation()  # doctest: +IGNORE_EXCEPTION_DETAIL
+    Traceback (most recent call last):
+    TypeError
