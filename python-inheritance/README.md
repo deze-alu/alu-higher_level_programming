@@ -1,0 +1,10 @@
+# Python - Inheritance
+
+Building class hierarchies in Python: subclasses, overriding methods, and the
+built-in functions that inspect type relationships.
+
+## Tasks
+
+| File | Description |
+|------|-------------|
+| `0-lookup.py` | Lists the available attributes and methods of an object |
