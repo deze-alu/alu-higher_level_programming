@@ -12,3 +12,4 @@ the difference between mutable and immutable types.
 | `2-answer.txt` | Whether two different integer values share an object |
 | `3-answer.txt` | Whether two equal small integers share an object |
 | `4-answer.txt` | Whether an assigned alias shares its object |
+| `5-answer.txt` | Whether an incremented integer shares its object |
