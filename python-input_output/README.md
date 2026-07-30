@@ -10,3 +10,4 @@ data structures to JSON and back.
 | `0-read_file.py` | Prints the whole content of a UTF8 text file |
 | `1-write_file.py` | Writes a string to a text file and counts characters |
 | `2-append_write.py` | Appends a string at the end of a text file |
+| `3-to_json_string.py` | Returns the JSON string representation of an object |
