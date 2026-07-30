@@ -17,3 +17,4 @@ built-in functions that inspect type relationships.
 | `7-base_geometry.py` | A base geometry class validating integers |
 | `8-rectangle.py` | A rectangle validating its private sides |
 | `9-rectangle.py` | A rectangle implementing its area and description |
+| `10-square.py` | A square built on the rectangle class |
