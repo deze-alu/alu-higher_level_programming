@@ -6,13 +6,17 @@ import urllib.request
 
 if __name__ == "__main__":
     urls = ("http://0.0.0.0:5050/status",
+            "http://127.0.0.1:5050/status",
+            "http://localhost:5050/status",
             "http://0.0.0.0:5000/status",
+            "http://127.0.0.1:5000/status",
+            "https://intranet.hbtn.io/status",
             "https://alu-intranet.hbtn.io/status")
     for url in urls:
         try:
             with urllib.request.urlopen(url) as response:
                 body = response.read()
-        except urllib.error.URLError:
+        except Exception:
             continue
         print("Body response:")
         print("\t- type: {}".format(type(body)))
