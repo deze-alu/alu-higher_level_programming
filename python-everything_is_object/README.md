@@ -18,3 +18,4 @@ the difference between mutable and immutable types.
 | `8-answer.txt` | Comparing two identical string literals with == |
 | `9-answer.txt` | Comparing two identical string literals with is |
 | `10-answer.txt` | Comparing two identical list literals with == |
+| `11-answer.txt` | Comparing two identical list literals with is |
