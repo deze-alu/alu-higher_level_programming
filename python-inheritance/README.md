@@ -14,3 +14,4 @@ built-in functions that inspect type relationships.
 | `4-inherits_from.py` | Checks whether an object belongs to a strict subclass |
 | `5-base_geometry.py` | An empty base class for geometry shapes |
 | `6-base_geometry.py` | A base geometry class whose area is not implemented |
+| `7-base_geometry.py` | A base geometry class validating integers |

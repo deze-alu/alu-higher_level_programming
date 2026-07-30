@@ -1,0 +1,123 @@
+``7-base_geometry`` module
+==========================
+
+Using ``BaseGeometry``
+----------------------
+
+Load the class under test:
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> bg = BaseGeometry()
+
+``area``
+--------
+
+The area is not implemented, so calling it raises an exception:
+
+    >>> bg.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
+The exception is a plain ``Exception``:
+
+    >>> try:
+    ...     bg.area()
+    ... except Exception as e:
+    ...     print(type(e).__name__)
+    Exception
+
+``area`` expects no argument other than the instance:
+
+    >>> bg.area(1)  # doctest: +IGNORE_EXCEPTION_DETAIL
+    Traceback (most recent call last):
+    TypeError
+
+``integer_validator``
+---------------------
+
+A valid positive integer is accepted silently and returns nothing:
+
+    >>> bg.integer_validator("my_int", 12)
+    >>> print(bg.integer_validator("width", 89))
+    None
+
+The smallest accepted value is 1:
+
+    >>> bg.integer_validator("size", 1)
+
+Large integers are accepted:
+
+    >>> bg.integer_validator("size", 1000000)
+
+A value that is not an integer raises a type error naming the value:
+
+    >>> bg.integer_validator("name", "John")
+    Traceback (most recent call last):
+    TypeError: name must be an integer
+
+    >>> bg.integer_validator("age", 4.5)
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+    >>> bg.integer_validator("size", None)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> bg.integer_validator("size", [1, 2])
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> bg.integer_validator("size", (1, 2))
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> bg.integer_validator("size", {1: 2})
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+A boolean is not accepted, even though it behaves like an integer:
+
+    >>> bg.integer_validator("height", True)
+    Traceback (most recent call last):
+    TypeError: height must be an integer
+
+    >>> bg.integer_validator("height", False)
+    Traceback (most recent call last):
+    TypeError: height must be an integer
+
+Zero is refused because the value must be greater than 0:
+
+    >>> bg.integer_validator("age", 0)
+    Traceback (most recent call last):
+    ValueError: age must be greater than 0
+
+A negative value is refused as well:
+
+    >>> bg.integer_validator("distance", -4)
+    Traceback (most recent call last):
+    ValueError: distance must be greater than 0
+
+The type is checked before the value, so a string never reports a value error:
+
+    >>> bg.integer_validator("weird", "-4")
+    Traceback (most recent call last):
+    TypeError: weird must be an integer
+
+Both arguments are required:
+
+    >>> bg.integer_validator("size")  # doctest: +IGNORE_EXCEPTION_DETAIL
+    Traceback (most recent call last):
+    TypeError
+
+    >>> bg.integer_validator()  # doctest: +IGNORE_EXCEPTION_DETAIL
+    Traceback (most recent call last):
+    TypeError
+
+The validator is available to every subclass:
+
+    >>> class Shape(BaseGeometry):
+    ...     pass
+    >>> Shape().integer_validator("side", 5)
+    >>> Shape().integer_validator("side", -5)
+    Traceback (most recent call last):
+    ValueError: side must be greater than 0
